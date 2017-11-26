@@ -9,7 +9,7 @@ import android.view.View;
 
 
 public class Submition extends AppCompatActivity {
-    Button buttonAgain;
+    Button buttonAgain, Hbutton1;
 
     /// sending email //////
     public void process (View view){
@@ -30,12 +30,23 @@ public class Submition extends AppCompatActivity {
         }
     }
 
+    public void homeB(){
+        Hbutton1 = (Button) findViewById(R.id.buttonHome);
+
+        Hbutton1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i= new Intent (Submition.this,Home.class);
+                startActivity(i);
+            }
+        });
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_submition);
 
-
+        homeB();
     //////////button//////////////
         buttonAgain = (Button) findViewById(R.id.buttonAgain);
         buttonAgain.setOnClickListener(new View.OnClickListener() {

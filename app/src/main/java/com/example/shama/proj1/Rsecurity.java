@@ -36,7 +36,16 @@ public class Rsecurity extends AppCompatActivity {
         });
     }
 
-
+    public void HomeB(){
+        Hbutton22 = (Button) findViewById(R.id.Hbutton2);
+        Hbutton22.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i= new Intent (Rsecurity.this,Home.class);
+                startActivity(i);
+            }
+        });
+    }
 
 
     @Override
@@ -45,5 +54,6 @@ public class Rsecurity extends AppCompatActivity {
         setContentView(R.layout.activity_rsecurity);
         violation();
         SumbV();
+        HomeB();
     }
 }

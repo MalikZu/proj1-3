@@ -21,7 +21,12 @@
             android:label="@string/app_name" />
         <activity android:name=".Rsecurity" />
         <activity android:name=".Submition" />
-        <activity android:name=".Submitted"></activity>
+        <activity android:name=".Submitted" />
+        <activity android:name=".Home" />
+        <activity android:name=".StudentViolations" />
+        <activity android:name=".SelectRole" />
+        <activity android:name=".Register" />
+        <activity android:name=".LoginActivity"></activity>
     </application>
 
 </manifest>
