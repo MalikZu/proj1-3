@@ -1,6 +1,10 @@
+package com.example.shama.proj1;
+
+import com.example.shama.proj1.Person;
+
 import java.util.ArrayList;
 
-public class Security extends Person{
+public class Security extends Person {
 
 	private Campus campus;
 	private ArrayList<Violation> issuedViolations;

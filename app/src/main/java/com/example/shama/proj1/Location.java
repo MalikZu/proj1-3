@@ -1,8 +1,12 @@
+package com.example.shama.proj1;
+
+import com.example.shama.proj1.Campus;
+import com.example.shama.proj1.Floor;
 
 public class Location {
 
 	private Campus campus;
-	private Floor floor; 
+	private Floor floor;
 	private String room;
 	
 	

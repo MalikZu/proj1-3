@@ -1,3 +1,5 @@
+package com.example.shama.proj1;
+
 import java.util.ArrayList;
 
 public class Student extends Person {
