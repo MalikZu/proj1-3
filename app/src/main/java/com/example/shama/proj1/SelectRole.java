@@ -23,7 +23,7 @@ public class SelectRole extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_select_role);
         txt = (TextView) findViewById(R.id.textView);
         txt1 = (TextView) findViewById(R.id.textView2);
         start = (Button) findViewById(R.id.button3);
