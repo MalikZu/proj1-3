@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "499285638256",
+    "firebase_url": "https://project-violation.firebaseio.com",
+    "project_id": "project-violation",
+    "storage_bucket": "project-violation.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:499285638256:android:9b134695edfbb2f4",
+        "android_client_info": {
+          "package_name": "com.example.shama.proj1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "499285638256-l5jb2ktbflfnm3eeg2ma07hur4c61b7j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA8k9uVdAvWMkcA7M8xR8sozLdL4AEKU_Q"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
