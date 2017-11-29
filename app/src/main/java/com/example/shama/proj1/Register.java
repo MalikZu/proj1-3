@@ -31,7 +31,7 @@ public class Register extends AppCompatActivity {
     EditText DOB;
     EditText id;
     String s1="";
-    EditText Gender;
+    EditText gender;
     EditText studentEmail;
 
     private FirebaseAuth mAuth;
@@ -48,16 +48,19 @@ public class Register extends AppCompatActivity {
         text8 = (TextView) findViewById(R.id.textView8);
         text4 = (TextView) findViewById(R.id.textView4);
         name = (EditText) findViewById(R.id.editText);
-//        email = (EditText) findViewById(R.id.editText);
+        studentEmail = (EditText) findViewById(R.id.emailText);
         id = (EditText) findViewById(R.id.editText2);
         pass = (EditText) findViewById(R.id.editText3);
         DOB = (EditText) findViewById(R.id.editText4);
-        Gender = (EditText) findViewById(R.id.editText7);
-        save = (Button) findViewById(R.id.button3);
+        gender = (EditText) findViewById(R.id.editText7);
+        save = (Button) findViewById(R.id.button5);
         choices = (ListView) findViewById(R.id.list);
-        final String[] itemsArray = {"Main Campus", "Sas AlNakhl Campus", "Masdar Campus"};
+        final String[] itemsArray = {"Main Campus", "SasAlNakhl Campus", "Masdar Campus"};
         ArrayAdapter adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, itemsArray);
         choices.setAdapter(adapter);
+
+
+        mAuth = FirebaseAuth.getInstance();
 
 
 
@@ -65,6 +68,8 @@ public class Register extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
                 s1 = itemsArray[position];
+                s1= s1.split(" ")[0];
+                System.out.print(s1);
             }
         });
 
@@ -73,11 +78,20 @@ public class Register extends AppCompatActivity {
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String email = studentEmail.getText().toString();
+                String gen= gender.getText().toString();
+                Student student= new Student();
+
+
+                student.setEmail(studentEmail.getText().toString());
+                student.setGender((gen.equals("m")||gen.equals("M")||gen.equals("Male")||gen.equals("male"))? Gender.Male:Gender.Female);
                 String password = pass.getText().toString();
+                student.setCampus(Campus.valueOf(s1));
+                student.setDateOfBirth(DOB.getText().toString());
+                student.setName(name.getText().toString());
 
+                student.updateFirebase();
 
-                mAuth.createUserWithEmailAndPassword(email, password)
+                mAuth.createUserWithEmailAndPassword(student.getEmail(), password)
                         .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                             public static final String TAG = "FBLog";
 

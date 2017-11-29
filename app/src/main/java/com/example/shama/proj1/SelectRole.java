@@ -18,7 +18,7 @@ public class SelectRole extends AppCompatActivity {
     TextView txt;
     Button start;
     Button back;
-    String s1="";
+    String s1= "";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -36,7 +36,10 @@ public class SelectRole extends AppCompatActivity {
         choices.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
+                System.out.println(position);
                 s1 = itemsArray[position];
+                System.out.println(s1);
+
             }
         });
 
@@ -45,8 +48,9 @@ public class SelectRole extends AppCompatActivity {
 
             public void onClick(View v) {
                 Intent i=new Intent(SelectRole.this,Register.class);
-                i.putExtra("Source",
-                        "you are a "+s1);
+                System.out.println(s1);
+//                i.putExtra("Source",
+//                        "you are a "+s1);
                 startActivity(i);
             }
         });

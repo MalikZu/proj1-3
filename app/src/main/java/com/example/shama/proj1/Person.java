@@ -6,8 +6,24 @@ public class Person {
 	private String dateOfBirth;
 	private String name;
 	private Gender gender;
-	
-	
+	private String email;
+
+	public Gender getGender() {
+		return gender;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setGender(Gender gender) {
+		this.gender = gender;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
 	public String getId() {
 		return id;
 	}

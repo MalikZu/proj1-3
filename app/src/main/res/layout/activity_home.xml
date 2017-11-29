@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    android:background="@drawable/backg"
     tools:context="com.example.shama.proj1.Home">
 
     <TextView

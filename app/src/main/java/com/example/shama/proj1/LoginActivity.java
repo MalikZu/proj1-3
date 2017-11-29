@@ -37,23 +37,27 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
-    public void homeB(){
-        login = (Button) findViewById(R.id.loginB);
-
-        login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i= new Intent (LoginActivity.this,Home.class);
-                startActivity(i);
-            }
-        });
-    }
+//    public void homeB(){
+//        login = (Button) findViewById(R.id.loginB);
+//
+//        login.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent i= new Intent (LoginActivity.this,Home.class);
+//                startActivity(i);
+//            }
+//        });
+//    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_login);
+
+
         logEmail = (EditText) findViewById(R.id.Name);
         logPass = (EditText) findViewById(R.id.ID);
         login =(Button) findViewById(R.id.loginB);
-        super.onCreate(savedInstanceState);
 
         mAuth = FirebaseAuth.getInstance();
 
@@ -88,7 +92,6 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        setContentView(R.layout.activity_login);
-        homeB();
+//        homeB();
     }
 }
